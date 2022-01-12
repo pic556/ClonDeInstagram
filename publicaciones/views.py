@@ -5,5 +5,5 @@ from .models import Pub_instagram,Com_instagram
 
 
 def publicacion(request):
-    posts= Pub_instagram.objects.all().order_by("-created_at")
-    return render(request,"publicaciones/publicaciones.html",{"var_post":posts})
+    posts= Pub_instagram.objects.all().order_by("-fecha_pub")
+    return render(request,"publicaciones/publicaciones.html",{"posts":posts})
